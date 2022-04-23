@@ -6,8 +6,9 @@
   const stop= document.getElementById("stop");
   const reset= document.getElementById("reset");
   
-  let startTime ;
+  let startTime;
   let clearId;
+  let elapsedTime = 0;
   
   function setBtnStateInitial(){
    start.disabled = false;
@@ -29,7 +30,7 @@
   
 　function countUp() {
   console.log(Date.now() - startTime);
-  const d = new Date(Date.now() - startTime);
+  const d = new Date(Date.now() - startTime + elapsedTime);
 　const m = String(d.getMinutes()).padStart(2, '0');
 　const s = String(d.getSeconds()).padStart(2, '0');
 　const ms = String(d.getMilliseconds()).padStart(3, '0');
@@ -50,11 +51,13 @@
   stop.addEventListener("click", function(){
     clearTimeout(clearId);
     setBtnStateStop();
+    elapsedTime += Date.now() - startTime;
  	 });
  	
   reset.addEventListener("click", function(){
     display.textContent = "００:００.０００";
     setBtnStateInitial();
+    elapsedTime = 0;
    });
 
 }
