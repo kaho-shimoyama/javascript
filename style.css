@@ -1,0 +1,41 @@
+#timer{
+    font-size:15px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#display{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+        
+#button{
+    display:flex;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#start{
+    font-weight: 700;
+    background-color:#cccccc;
+    border:1px solid;
+    border-radius: 5px;
+    padding:5px;
+}
+
+#stop{
+    font-weight: 700;
+    background-color:#cccccc;
+    border:1px solid;
+    border-radius: 5px;
+    margin-left:10px;
+}
+
+#reset{
+    font-weight: 700;
+    background-color:#cccccc;
+    border:1px solid;
+    border-radius: 5px;
+    margin-left:10px;
+}
