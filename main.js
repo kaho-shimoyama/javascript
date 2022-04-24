@@ -19,7 +19,7 @@
   function setBtnStateRunning(){
     start.disabled = true;
     stop.disabled = false;
-    reset.disabled = false;
+    reset.disabled = true;
   }
   
   function setBtnStateStop(){
